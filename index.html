@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Videojuegos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎮 Mis Videojuegos</h1>
+    <p>Reto Final · DWEC · 2º DAW</p>
+  </header>
+
+  <main>
+    <!-- TABLA DE VIDEOJUEGOS -->
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Compañía</th>
+          <th>Plataforma</th>
+          <th>Valoración</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoTabla">
+        <!-- Las filas las crea JavaScript -->
+      </tbody>
+    </table>
+
+    <!-- FORMULARIO PARA AÑADIR JUEGOS -->
+    <section class="form-juego">
+      <h2>Añadir un videojuego</h2>
+
+      <form id="formJuego">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Ej: Elden Ring">
+        </div>
+
+        <div class="campo">
+          <label for="compania">Compañía</label>
+          <input type="text" id="compania" placeholder="Ej: FromSoftware">
+        </div>
+
+        <div class="campo">
+          <label for="plataforma">Plataforma</label>
+          <select id="plataforma">
+            <option value="">-- Elige una --</option>
+            <option value="PC">PC</option>
+            <option value="PlayStation 5">PlayStation 5</option>
+            <option value="Xbox Series X">Xbox Series X</option>
+            <option value="Nintendo Switch">Nintendo Switch</option>
+            <option value="Multiplataforma">Multiplataforma</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="valoracion">Valoración (0-10)</label>
+          <input type="number" id="valoracion" min="0" max="10" step="0.1" placeholder="Ej: 9.5">
+        </div>
+
+        <div class="campo">
+          <label for="precio">Precio (€)</label>
+          <input type="number" id="precio" min="0" step="0.01" placeholder="Ej: 59.99">
+        </div>
+
+        <button type="button" id="btnAnadir" class="btn">Añadir juego</button>
+        <p id="mensaje"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho por Miguel · IES Juan García Valdemora</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
